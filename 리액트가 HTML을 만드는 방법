@@ -1,0 +1,16 @@
+각 *.js 파일은 일종의 콤포넌트 개념이다.
+해당 파일들이 최종적으로 index.js 의 ReactDOM.render 로 인해 호출되고 정해진 HTML DOM에 붙어 브라우저에 렌더링 된다.
+
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+*App.js 콤포넌트가 render에 의해 root 라는 id 를 가지는 DOM 에 렌더링 되는것을 나타낸 코드.
+*jqgrid 가 HTML DOM 에 붙는 원리와 굉장히 비슷...
+
+따라서, 최초 HTML이 빈 상태로 로딩된 후 리액트에 의해 만들어진 콤포넌트가 들어가게 된다.
