@@ -8,5 +8,28 @@ ReactDOM.render(
 자바스크립트와 HTML을 연결하는 리액트만의 특별한 문법을 JSX 라고 한다.
 정작 콤포넌트 내에서 HTML을 만들고 꾸미는 등의 일은 자바스크립트로 하게 됨...
 
-노마드코더 첫 강의에선 <App />과 다른 JSX콤포넌트를 병용하는건 안된댔는데
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+    <App2/>              <----------
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+* 노마드코더 첫 강의에선 <App />과 다른 JSX콤포넌트(App2)를 병용하는건 안된댔는데
 해보니까 됨.. 버전 차이인가 봄...
+
+import App2 from './App2';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <App2 />            <-------
+    </div>
+  );
+}
+
+export default App;
+
+* 노마드코더에서 대안으로 제시한 콤포넌트 내부에 JSX로 콤포넌트 중첩해서 넣기도 됨.
