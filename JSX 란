@@ -1,1 +1,10 @@
+ReactDOM.render(
+  <React.StrictMode>
+    <App />               <------ JSX
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+자바스크립트와 HTML을 연결하는 리액트만의 특별한 문법을 JSX 라고 한다.
+정작 콤포넌트 내에서 HTML을 만들고 꾸미는 등의 일은 자바스크립트로 하게 됨...
 
