@@ -1,4 +1,7 @@
 각 *.js 파일은 일종의 콤포넌트 개념이다.
+
+*콤포넌트 : HTML을 반환하는 함수
+
 해당 파일들이 최종적으로 index.js 의 ReactDOM.render 로 인해 호출되고 정해진 HTML DOM에 붙어 브라우저에 렌더링 된다.
 
 import App from './App';
