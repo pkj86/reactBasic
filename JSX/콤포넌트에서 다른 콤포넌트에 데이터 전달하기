@@ -47,3 +47,23 @@ function Food({fav}){  <---------- ES6 문법(아마도?), props 오브젝트에
     <h1>I like {fav}</h1> <---------- 프로퍼티의 데이터로 HTML 내용을 채워줌.
   );
 }
+
+=====================================================
+
+function Food({fav}){
+  return(
+    <h1>I like {fav}</h1>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <Food fav="kimchi"/>     <------- 4개의 콤포넌트에 각기 다른 데이터가 담겨져 출력됨.
+      <Food fav="ramen"/>
+      <Food fav="kookbab"/>
+      <Food fav="steak"/>
+    </div>
+  );
+}
