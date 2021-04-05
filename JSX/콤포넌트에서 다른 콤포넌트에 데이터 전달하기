@@ -1,0 +1,49 @@
+function Food(){
+  return(
+    <h1>I like Food</h1>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <Food />
+    </div>
+  );
+}
+
+이처럼 파일 하나에 복수의 콤포넌트를 작성할수 있다.
+
+function Food(){
+  return(
+    <h1>I like Food</h1>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <Food fav="kimchi"/>    <---- 콤포넌트에 정보를 넣을수 있음. property 라고 한다.
+    </div>
+  );
+}
+
+* <Food fav="kimchi" somthing={true} rarara="{["hello, 1, 2, 3, 4, true"]}"/>
+이처럼 복수의 프로퍼티들을 넣어줄수도 있음.
+
+
+function Food(props){   <---------- 부모 콤포넌트에서 넣어준 프로퍼티를 인자로 받아서 자식 콤포넌트에서 쓸수 있다.
+  console.log(props);   <---------- props 라는 오브젝트형 객체로 넘어온다.
+  return(
+    <h1>I like Food</h1>
+  );
+}
+
+
+function Food({fav}){  <---------- ES6 문법(아마도?), props 오브젝트에서 fav 객체를 바로 꺼내는 문법.
+  return(
+    <h1>I like {fav}</h1> <---------- 프로퍼티의 데이터로 HTML 내용을 채워줌.
+  );
+}
