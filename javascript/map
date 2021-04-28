@@ -1,0 +1,37 @@
+javascript map
+
+array 객체의 내장함수로 배열을 돌며 각 배열 객체당 지정된 function을 실행한다.
+
+const arr = ["a", "b", "c"....];
+
+arr.map(value => {return value})   <--------- value 는 함수 매개변수를 의미
+
+arr.map(function(value){return value})  <---------- ES5 문법으로 나타냈을때.
+
+결과 : a, b, c.....
+
+이렇게, 배열 내부의 각 객체마다 return 이 실행되므로 값이 쭉 반환된다.
+
+react JSX 와의 조합
+
+
+function Food({name, picture}){
+  return(
+    <div>
+      <h2>I like {name}</h2>
+      <img src={picture}/>
+    </div>
+  );
+}
+
+const foodILike = [Objects...];
+
+function App() {
+  return (
+    <div>
+      {foodILike.map(dish => 
+        <Food name={dish.name} picture={dish.image}/>        <----------javascript map 을 통해서 JSX 객체를 foodILIke 배열 내부의 객체마다 생성하여 화면에 뿌려준다.
+      )}
+    </div>
+  );
+}
